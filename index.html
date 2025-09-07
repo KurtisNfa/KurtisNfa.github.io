@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-bar">
+      <div class="logo">NFA + <span>KURTIS</span></div>
+      <div class="nav-links">
+        <a href="#" class="active">Accueil</a>
+        <a href="#about-section">À propos</a>
+        <a href="#projects-section">Projets</a>
+        <a href="#skills-section">Compétences</a>
+        <a href="#contact-section">Contact</a>
+      </div>
+    </div>
+  </header>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1 style="font-size: 35px;">Je suis <span class="accent">Kurtis</span>, Développeur en devenir passionné par le web et le design !</h1>
+      <button class="hero-btn" onclick="document.getElementById('projects-section').scrollIntoView({behavior:'smooth'})">Voir mes projets</button>
+    </div>
+    <div class="hero-image">
+      <!-- Example SVG illustration -->
+      <img src="img/px1.jpg" alt="Web illustration">
+    </div>
+  </section>
+  <!-- About -->
+  <section class="about-section" id="about-section">
+    <div class="about-left">
+      <div class="about-title" style="text-align: end;">À propos</div>
+      <p>Je m'appelle <span class="accent" style="color: #21DED9;">Kurtis</span>, passionné par la création de sites web modernes et interactifs.</p>
+      <p>Je suis actuellement étudiant(e) en <span class="accent" style="color: #21DED9;">développement web</span>, et je cherche à améliorer mes compétences en JavaScript, HTML et CSS.</p>
+      <p>J’adore transformer mes idées en projets concrets et expérimenter avec les nouvelles technologies.</p>
+      <a href="My CV.pdf" class="about-cv" target="_blank" download>Télécharger mon CV</a>
+    </div>
+    <div class="about-photo">
+      <img src="img/px2.jpg" alt="Photo de profil">
+    </div>
+  </section>
+  <!-- Projects -->
+  <section class="projects-section" id="projects-section">
+    <div class="projects-title">Mes Projets</div>
+    <div class="projects-list">
+      <div class="project-card">
+        <p style="text-align: center;">Un mini-jeu interactif en JavaScript qui calcule un prêt (annuel)</p>
+        <div class="hashtags" style="text-align: center;">#html, #css, #js</div>
+        <button class="project-btn" style="display: block; margin: 0 auto;"><a href="exercices/exercice6.html" target="_blank" style="color:white; text-decoration-line: none;">Voir</a></button>
+      </div>
+      <div class="project-card">
+        <p style="text-align: center;">Template de site web pour un salon de beauté (Pandora's Box)</p>
+        <div class="hashtags" style="text-align: center;">#html, #css</div>
+        <button class="project-btn" style="display: block; margin: 0 auto;"><a href="Pandoras Box/home_page.html" target="_blank" style="color: white; text-decoration-line: none;">Voir</a></button>
+      </div>
+      <div class="project-card">
+        <p style="text-align: center;">Un quizz interactif en JavaScript qui utilise des événements DOM</p>
+        <div class="hashtags" style="text-align: center;">#html, #css, #js</div>
+        <button class="project-btn" style="display: block; margin: 0 auto;"><a href="Squizz App/index.html" target="_blank" style="color: white; text-decoration-line: none;">Voir</a></button>
+      </div>
+    </div>
+  </section>
+  <!-- Skills -->
+  <section class="skills-section" id="skills-section">
+    <div class="skills-title">Mes Compétences</div>
+    <div class="skills-cards">
+      <div class="skills-card">
+        <h3>Soft Skills</h3>
+        <div class="skill-label" style="text-align: start;">Gestion de projet</div>
+        <div class="skill-bar-bg"><div class="skill-bar" style="width:75%"></div></div>
+        <div class="skill-label" style="text-align: start;">Résolution de problème</div>
+        <div class="skill-bar-bg"><div class="skill-bar" style="width:67%"></div></div>
+        <div class="skill-label" style="text-align: start;">Adaptabilité</div>
+        <div class="skill-bar-bg"><div class="skill-bar" style="width:93%"></div></div>
+      </div>
+      <div class="skills-card">
+        <h3>Hard Skills</h3>
+        <div class="skill-label" style="text-align: start;">HTML</div>
+        <div class="skill-bar-bg"><div class="skill-bar" style="width:92%"></div></div>
+        <div class="skill-label" style="text-align: start;">CSS</div>
+        <div class="skill-bar-bg"><div class="skill-bar" style="width:80%"></div></div>
+        <div class="skill-label" style="text-align: start;">JavaScript</div>
+        <div class="skill-bar-bg"><div class="skill-bar" style="width:61%"></div></div>
+        <div class="skill-label" style="text-align: start;">VS Code</div>
+        <div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact -->
+  <section class="contact-section" id="contact-section">
+    <span class="headline" style="font-size: 35px;">Vous avez un </span><span class="accent2" style="font-size: 35px;">projet en tête ?</span><br>
+    <span style="font-size: 31px;">N'hésitez pas à me </span><span class="accent2" style="font-size: 35px; font-weight: bold;">contacter</span>
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Message envoyé !');">
+      <div class="contact-fields">
+        <input type="text" placeholder="Votre prénom" required>
+        <input type="text" placeholder="Votre nom" required>
+      </div>
+      <input type="text" placeholder="Votre sujet" required>
+      <textarea placeholder="Votre message ici..." required></textarea>
+      <button type="submit" style="font-size: 20px; font-weight: bold; cursor: pointer;">Envoyer</button>
+    </form>
+  </section>
+  <!-- Footer -->
+  <footer>
+    Designed by <a class="footer-link" href="#">KURTIS</a> with HTML, CSS, JS
+    <span class="footer-right">Tous droits réservés - 2025</span>
+  </footer>
+</body>
+</html>
