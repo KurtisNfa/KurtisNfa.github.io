@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Horloge en temps réel</title>
+</head>
+<body>
+  <h2>Horloge</h2>
+  <input type="text" id="horloge" readonly>
+
+  <script>
+    function majHeure() {
+      const d = new Date();
+      const h = String(d.getHours()).padStart(2,"0");
+      const m = String(d.getMinutes()).padStart(2,"0");
+      const s = String(d.getSeconds()).padStart(2,"0");
+      document.getElementById("horloge").value = h+":"+m+":"+s;
+      setTimeout(majHeure,1000);
+    }
+    majHeure();
+  </script>
+</body>
+</html>

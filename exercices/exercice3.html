@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 3 - Date</title>
+</head>
+<body>
+  <h2>Manipulation de dates</h2>
+  <input type="text" id="dateSaisie" placeholder="JJ-MM-AAAA">
+  <button onclick="analyser()">Analyser</button>
+  <p id="jour"></p>
+  <p id="mois"></p>
+  <p id="annee"></p>
+  <p id="diff"></p>
+
+  <script>
+    function analyser() {
+      const val = document.getElementById("dateSaisie").value;
+      const [jj, mm, aaaa] = val.split("-");
+      const date = new Date(aaaa, mm - 1, jj);
+      document.getElementById("jour").textContent = "Jour : " + date.getDate();
+      document.getElementById("mois").textContent = "Mois : " + (date.getMonth() + 1);
+      document.getElementById("annee").textContent = "Année : " + date.getFullYear();
+      const aujourd = new Date();
+      const diff = Math.floor((aujourd - date) / (1000 * 60 * 60 * 24));
+      document.getElementById("diff").textContent = "Différence en jours avec aujourd'hui : " + diff;
+    }
+  </script>
+</body>
+</html>

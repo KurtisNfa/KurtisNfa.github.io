@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 1 - String</title>
+</head>
+<body>
+  <h2>Manipulation de chaînes</h2>
+  <input type="text" id="texte" placeholder="Saisir une chaîne">
+  <p id="longueur"></p>
+  <p id="substring"></p>
+
+  <script>
+    const input = document.getElementById("texte");
+    input.addEventListener("input", function() {
+      const val = input.value;
+      document.getElementById("longueur").textContent = "Longueur : " + val.length;
+      document.getElementById("substring").textContent = "3 premiers caractères : " + val.substring(0, 3);
+    });
+  </script>
+</body>
+</html>

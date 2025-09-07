@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 5 - Tableaux</title>
+</head>
+<body>
+  <h2>Manipulation de tableaux</h2>
+  <p id="tableau"></p>
+  <button onclick="ajouter()">Ajouter 42</button>
+  <button onclick="supprimer(2)">Supprimer l'élément 2</button>
+  <button onclick="trier()">Trier</button>
+
+  <script>
+    let tab = [5, 8, 2, 9];
+    document.getElementById("tableau").textContent = tab.join(", ");
+
+    function maj() {
+      document.getElementById("tableau").textContent = tab.join(", ");
+    }
+
+    function ajouter() {
+      tab.push(42);
+      maj();
+    }
+
+    function supprimer(val) {
+      tab = tab.filter(x => x !== val);
+      maj();
+    }
+
+    function trier() {
+      tab.sort((a,b) => a-b);
+      maj();
+    }
+  </script>
+</body>
+</html>
